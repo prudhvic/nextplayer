@@ -1,16 +1,144 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;400;500;700;800&display=swap");
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  letter-spacing: 1.5px;
+  font-family: "Spartan", sans-serif;
+  text-transform: capitalize;
+  line-height: 1.5;
+}
+body {
+  height: 100vh;
+  /* overflow: hidden; */
+  background-color: black;
+  background: linear-gradient(120deg, #1db954, #191414);
+}
+main {
+  /* max-width: 600px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1000px;
+  margin: 3em auto;
+  padding: 1em;
+  gap: 1em;
+}
+.music-container {
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  gap: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
+}
+.music-container img {
+  position: relative;
+  top: -30px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
+  height: 300px;
+}
+.controls {
+  display: flex;
+  padding: 1em;
+  gap: 10px;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 4rem;
+}
+.progress-bar {
+  background-color: black;
+  width: 80%;
+  height: 4px;
+  border-radius: 5px;
+  /* padding: 3px; */
+  display: flex;
+}
+
+.progress {
+  background-color: white;
+  height: inherit;
+  transition: 0.5s;
+  width: 0%;
+}
+.details {
+  display: grid;
+  text-align: center;
+  gap: 1rem;
+}
+.btn {
+  /* background-color: black; */
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #1db954, green);
+  pointer-events: none;
+}
+.music-time {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.music-grid img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.music-grid {
+  display: grid;
+  gap: 1rem;
+}
+.song-flex {
+  background-color: white;
+  align-items: center;
+  padding: 1em;
+  gap: 1rem;
+  display: flex;
+  border-radius: 6px;
+}
+.song-flex h2 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.song-flex p {
+  font-size: 0.9rem;
+}
+.song-active img {
+  animation: round 1s linear infinite;
+}
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
